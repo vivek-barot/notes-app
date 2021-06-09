@@ -1,0 +1,19 @@
+{
+  "name": "notes-app",
+  "version": "1.0.0",
+  "description": "This is one demo app for learning Node basics.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vivek-barot/notes-app.git"
+  },
+  "author": "Vivek Barot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vivek-barot/notes-app/issues"
+  },
+  "homepage": "https://github.com/vivek-barot/notes-app#readme"
+}
