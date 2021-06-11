@@ -1,6 +1,3 @@
-// const fs = require("fs");
-// fs.writeFileSync("notes.txt", "First content");
-// fs.appendFileSync("notes.txt", " Appended text");
 const yargs = require("yargs");
 const notes = require("./notes");
 
@@ -22,9 +19,7 @@ yargs.command({
       type: "string",
     },
   },
-  handler: (argv) => {
-    notes.addNote(argv.title, argv.body);
-  },
+  handler: (argv) => notes.addNote(argv.title, argv.body),
 });
 
 //Remove
@@ -38,27 +33,28 @@ yargs.command({
       type: "string",
     },
   },
-  handler: (argv) => {
-    notes.removeNote(argv.title);
-  },
-});
-
-//Read
-yargs.command({
-  command: "read",
-  describe: "Reading a note",
-  handler: () => {
-    console.log("in Read");
-  },
+  handler: (argv) => notes.removeNote(argv.title),
 });
 
 //List
 yargs.command({
   command: "list",
   describe: "List of notes",
-  handler: () => {
-    console.log("in List");
+  handler: () => notes.listNotes(),
+});
+
+//Read
+yargs.command({
+  command: "read",
+  describe: "Reading a note",
+  builder: {
+    title: {
+      describe: "Note title",
+      demandOption: true,
+      type: "string",
+    },
   },
+  handler: (argv) => notes.readNote(argv.title),
 });
 
 yargs.parse();
