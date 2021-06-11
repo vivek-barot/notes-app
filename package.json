@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/vivek-barot/notes-app/issues"
   },
-  "homepage": "https://github.com/vivek-barot/notes-app#readme"
+  "homepage": "https://github.com/vivek-barot/notes-app#readme",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "yargs": "^17.0.1"
+  }
 }
